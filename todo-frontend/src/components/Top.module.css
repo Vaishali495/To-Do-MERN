@@ -1,0 +1,24 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTodo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addTodo img:hover {
+  cursor: pointer;
+}
+
+.darkTheme > span {
+  opacity: 50%;
+}
+
+.AddIconDark {
+  height: 1.5rem;
+  margin-right: 2px;
+}

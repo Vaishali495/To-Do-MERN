@@ -1,0 +1,196 @@
+.menu-Div2 {
+  /* background-color: #ab5b5b; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 8rem;
+  gap: 2rem;
+}
+.menu-Div2 > button{
+  border-radius: 2rem;
+  border: none;
+  background-color: black ;
+  color: white;
+  padding: 0.8rem;
+}
+.menu-Div1 {
+  /* background-color: #f4cdcd; */
+  width: 20rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 2rem;
+}
+
+.menu-div1-dark{
+  color: white;
+}
+
+.menu-div2-dark .circle {
+  filter: brightness(0.3);
+}
+
+.menu-div2-dark > button {
+  background-color: #4B69FF;
+}
+
+.menu-div2-dark .threeDotIcon {
+  filter: brightness(0) invert(1); /* Makes three dots white */
+  z-index: 1;
+}
+
+.menu-div1-dark .BoardIcon,
+.menu-div1-dark .AddIcon {
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+.main-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BoardView,
+.AddView {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.darkBorder {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 4px solid white;
+}
+
+.BoardView {
+  border-bottom: 4px solid #000000;
+}
+
+.darkAddView {
+  display: flex;
+  gap: 0.5rem;
+  color: white;
+  opacity: 50%;
+}
+
+.BoardIcon {
+  width: 13.5px;
+  height: 13.5px;
+  margin-top: 1rem;
+}
+
+.BoardContent {
+  font-family: Exo 2;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  width: 83px;
+  height: 16px;
+}
+
+.AddIcon {
+  width: 18px;
+  height: 18px;
+  margin-top: 1rem;
+}
+
+.AddContent {
+  width: 68px;
+  height: 16px;
+  font-family: Exo 2;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+
+.filter,
+.sort {
+  width: 40px;
+  height: 16px;
+  font-family: Exo 2;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-right: 1rem;
+}
+
+.sort {
+  opacity: 60%;
+  font-weight: bolder;
+}
+
+.circle-container {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    margin-top: 0.5rem;
+}
+
+.circle {
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+
+.threeDotIcon {
+    width: 11px;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.template {
+    background: #1C1D22;
+    color: white;
+    border-radius: 2rem;
+    width: 8rem;
+    height: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.content {
+    padding: 0.5rem;
+    text-align: center;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .main-header {
+    display: block;
+    text-align: center;
+  }
+
+  .menu-Div2 {
+    margin-top: 10px;
+    margin-right: 0;
+    gap:1rem;
+  }
+
+  .menu-Div1 {
+    margin: 0;
+    width: auto;
+  }
+
+  .BoardView {
+    border-bottom: 2px solid #000000;
+  }
+  
+}

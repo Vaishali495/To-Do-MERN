@@ -1,0 +1,74 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.darkTheme {
+  background-color: #373636;
+  color: white;
+}
+
+.darkTheme .searchIcon,
+.darkTheme .BeLLIcon,
+.darkTheme .CalenderIcon {
+    filter: brightness(0) invert(1); /* Makes icons white */
+    opacity: 50%;
+}
+
+.greeting {
+  padding: 1%;
+  font-family: Exo 2;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.right {
+  /* background-color: #a27c7c; */
+  margin: 1rem;
+  display: flex;
+  gap: 2rem;
+  margin-left: 6rem;
+}
+
+.searchIcon, .BeLLIcon, .CalenderIcon{
+  width: 18.33px;
+  height: 19px;
+  margin-top: 1rem;
+}
+
+.date {
+  font-family: Exo 2;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  opacity: 50%;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .main-header {
+    display: block;
+    text-align: center;
+    position: relative;
+  }
+
+  .right {
+    margin: 0;
+    position: absolute;
+    top: 30px;
+    gap: 2rem; 
+  }
+}

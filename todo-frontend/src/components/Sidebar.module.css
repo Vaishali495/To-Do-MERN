@@ -1,0 +1,108 @@
+.sidebar {
+  background-color: #1c1d22;
+  width: 90px;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.ovals {
+  margin: 2rem;
+}
+
+.box {
+  background-color: rgb(70, 69, 69);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  margin: 2rem;
+  margin-top: 0;
+  cursor: pointer;
+}
+
+.icon1 {
+  /* margin-top: 8px; */
+  width: 24px;
+  height: 24px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6,
+.icon7 {
+  margin-top: 2.2rem;
+  opacity: 50%;
+}
+
+.iconEnd {
+  margin-top: auto;     /* Push to bottom */
+  margin-bottom: 2rem;
+  opacity: 50%;
+}
+
+.collapseContainer {
+  overflow: hidden;
+  max-width: 0;
+  transition: max-width 0.5s ease-out;
+}
+
+.collapseContainer.show {
+  max-width: 300px; 
+
+}
+
+.collapseContainer.hide {
+  max-width: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    min-height: 130vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 70px;
+  }
+
+  .items {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .icon2,
+  .icon3,
+  .icon4,
+  .icon5,
+  .icon6,
+  .icon7 {
+    margin-top: 1.5rem;
+  }
+
+  .iconEnd {
+    margin-top: auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.darkTheme {
+  color: white;
+  background-color: #222327;
+}

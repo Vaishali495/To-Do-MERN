@@ -1,0 +1,11 @@
+.todoContainer {
+    height: 100%;
+    overflow-y: scroll;
+    padding: 1rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.todoContainer::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}

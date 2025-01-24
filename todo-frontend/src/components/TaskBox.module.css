@@ -1,0 +1,293 @@
+.main-div {
+  border: 2px solid rgb(233, 228, 228);
+  border-radius: 1rem;
+  height: auto;
+  margin: 1rem 1rem 0 1rem;
+  padding: 0.2rem;
+  background-color: white;
+  cursor: grab;
+}
+
+.darkTheme {
+  background-color: #373941;
+  border: none;
+}
+
+.box-top {
+  /* background-color: #ce8686; */
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+  /* gap: 8rem; */
+  height: 4rem;
+  position: relative;
+}
+
+.box-top-dark .text1 {
+  color: white;
+}
+
+.box-top-dark .text2 {
+  color: white;
+  opacity: 50%;
+}
+
+.box-top-dark .circle {
+  filter: brightness(0.3);
+}
+
+.box-top-dark .threeDotIcon {
+  filter: brightness(0) invert(1); /* Makes three dots white */
+  z-index: 1;
+}
+
+.top-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.text1 {
+  font-family: "Exo 2", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1c1d22;
+  margin: 0;
+  margin-top: 0.2rem;
+  padding: 0.3rem;
+}
+
+.text2 {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.top-icon {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+}
+
+.circle {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  cursor: pointer;
+}
+
+.threeDotIcon {
+  width: 11px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.box-progress {
+  /* background-color: #706161; */
+  width: 94%;
+  padding: 10px 0;
+  margin-left: 1rem;
+}
+
+.progressNumber {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+}
+
+.progress-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 70%;
+  height: 100%;
+  background-color: orange; 
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.box-progress-dark .progress-text .progressNumber{
+  color: white;
+  opacity: 50%;
+}
+
+.box-progress-dark .text {
+  color: white;
+  opacity: 50%;
+}
+
+.box-progress-dark .ThreeLineIcon {
+  filter: brightness(1) invert(1);
+}
+
+.left-div{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+}
+
+.ThreeLineIcon {
+    width: 16px;
+    height: 16px;
+}
+
+span {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.box-bottom {
+    /* background-color: #ac9292; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 94%;
+    margin-left: 1rem;
+}
+
+.date-badge {
+    background-color: #f2f2f2;
+    color: #666;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.box-bottom-dark .date-badge {
+  background-color: #575656;
+  color: white;
+  opacity: 50%;
+}
+
+.box-bottom-dark .icon {
+  color: #FFFFFF;
+}
+
+.box-bottom-dark .icon img {
+  filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+.box-bottom-dark .icon span {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.icon img:hover {
+  cursor: pointer;
+}
+
+progress.rounded-progress {
+  appearance: none; /* Reset default styles */
+  width: 100%;
+  height: 8px; /* Adjust the height as needed */
+  border-radius: 10px; /* Makes it rounded */
+  overflow: hidden;
+}
+
+/* Style the progress bar's value */
+progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* Background color */
+progress::-webkit-progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+/* Value color */
+progress::-webkit-progress-value {
+  background-color: #ffb755;
+  border-radius: 10px;
+}
+
+/* For Done tasks */
+progress.done::-webkit-progress-value {
+  background-color: #4CAF50;
+}
+
+progress.done::-moz-progress-bar {
+  background-color: #4CAF50;
+}
+
+@media screen and (max-width: 900px) {
+  .main-div {
+    border: 2px solid rgb(233, 228, 228);
+    margin: 0;
+    margin-top: 10px;
+    width: 32vw;
+  }
+
+  .text2 {
+    margin-right:35%;
+  }
+
+  .darkTheme {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .text1 {
+    margin-right: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box-progress {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-div {
+    border: 2px solid rgb(233, 228, 228);
+    width: auto;
+    border-radius: 1rem;
+    height: auto;
+    margin: 1rem 1rem 0 1rem;
+  }
+
+  .darkTheme {
+    border: none;
+  }
+}

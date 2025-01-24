@@ -1,0 +1,151 @@
+.main-container {
+  height: 100vh;
+}
+
+.darkTheme {
+  background-color: #373636;
+  color: white;
+}
+
+.darkHeader{
+  border: none;
+}
+
+/* .lightHeader {
+  border: 1px solid #ffffff;
+} */
+
+.header {
+  /* background-color: #5e4040; */
+  width: 100%;
+  height: 94px;
+  left: 408px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.menu {
+  /* background-color: #8c8a8a; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  /* margin: 0 2rem; */
+}
+
+.menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  right: 4rem;
+  height: 2px;
+  background-color: rgb(212, 207, 207);
+}
+
+.darkMenu::after {
+  background-color: #707070;
+}
+
+.wrapper-div {
+  /* background-color: #a79999; */
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  overflow-y: hidden;
+  margin: 1%;
+  padding: 1.2rem;
+  height: 76vh;
+  /* min-height: 100vh; */
+}
+
+.todo-div,
+.inProgress-div,
+.done-div {
+  /* background-color: #e07373; */
+  width: 29%;
+  height: 40rem;
+  border-radius: 2.5%;
+  border: 2px dashed #dbcece;
+  padding: 1rem;
+}
+
+.todo-div-dark, .inProgress-div-dark, .done-div-dark {
+  background-color: #2d2e31;
+  border: none;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper-div {
+    overflow-y: auto;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .todo-div,
+  .inProgress-div,
+  .done-div {
+    width: 35vw;
+    height: auto; 
+    /* width: 100px; */
+    margin: 0;
+    text-align: center;
+  }
+
+  /* .done-div {
+    order: 3; 
+    width: 100%; 
+  } */
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .menu::after {
+    display: none;
+  }
+
+  .wrapper-div {
+    display: block;
+    overflow-y: auto;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0;
+    gap: 2rem;
+  }
+
+  .todo-div,
+  .inProgress-div,
+  .done-div {
+    width: 70vw;
+    height: auto;
+    min-height: 20rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+
+  .done-div {
+    margin-bottom: 0;
+  }
+}
+
+/* @media screen and (max-width: 800px) {
+  .wrapper-div {
+    display: block;
+    overflow-y: auto;
+    width: 250vw;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0;
+    gap: 2rem;
+  }
+} */
+
+

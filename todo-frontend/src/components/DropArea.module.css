@@ -1,0 +1,15 @@
+.drop-area{
+    /* background-color: #a18787; */
+    height: 20vh;
+    columns: #dcdcdc;
+    border: 2px dashed rgb(213, 208, 208);
+    border-radius: 1rem;
+    margin: 1rem 1rem 0 1rem;
+    padding: 0.2rem;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.hide-drop-area {
+    opacity: 0;
+}

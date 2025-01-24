@@ -1,0 +1,16 @@
+.darkTheme {
+    background-color: #222327 !important;
+    color: #ffffff !important;
+  }
+  
+  .darkTheme :global(.ant-menu-item) {
+    color: #ffffff !important;
+  }
+  
+  .darkTheme :global(.ant-menu-submenu-title) {
+    color: #ffffff !important;
+  }
+  
+  .darkTheme :global(.ant-menu-item:hover) {
+    background-color: #2C2D32 !important;
+  }

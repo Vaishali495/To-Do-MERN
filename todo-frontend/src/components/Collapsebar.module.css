@@ -1,0 +1,128 @@
+.collapseBar {
+    /* background-color: rgb(223, 188, 188); */
+    text-align: left;
+    width: 18rem;
+    position: relative;
+    height: 100vh;
+}
+
+.headDiv {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    margin-top: 2rem;
+}
+
+.heading {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    width: 118px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.AddIcon{
+    cursor: pointer;
+}
+
+.darkTheme {
+    background-color: #FFFFFF0A;
+}
+
+.lightTheme {
+    background-color: #040b210a;
+}
+
+/* .LightDarkButton {
+    padding: 8px;
+    margin-top: 28rem;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 5px;
+} */
+
+.LightDarkButton {
+    padding: 6px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    /* margin-left: 5px; */
+    position: absolute;
+    bottom: 3rem;
+    /* width: calc(18rem - 10px);
+    z-index: 1000; */
+    width: calc(100% - 10px);
+    /* margin: 0 5px; */
+}
+
+.LightButton, .DarkButton {
+    background: none;
+    border: none;
+    border: none;
+    padding: 4%;
+    width: 11rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.activeDarkButton {
+    background-color: #FFFFFF0F;
+    color: #FFFFFF;
+}
+
+.activeLightButton {
+    background-color: #fff;
+}
+
+.darkTheme4lightbtn {
+    /* background-color: #FFFFFF0F; */
+    color: white;
+    opacity: 50%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activeLightButton .flex img {
+    filter: brightness(0);  /* Makes icon black in light theme */
+}
+
+.darkTheme4lightbtn .flex img {
+    filter: brightness(1);  /* Keeps icon white in dark theme */
+}
+
+.activeDarkButton .flex img {
+    filter: brightness(1);
+}
+
+.DarkButton .flex img {
+    filter: brightness(0);
+}
+
+.DarkButton:not(.activeDarkButton) {
+    opacity: 50%;
+}
+
+.DarkButton:not(.activeDarkButton) .flex {
+    opacity: 50%;
+}
+
+.activeDarkButton .flex img {
+    filter: brightness(100);  /* Makes dark icon white when dark theme is active */
+}
