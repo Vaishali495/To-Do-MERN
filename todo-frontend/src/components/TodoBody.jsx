@@ -10,6 +10,7 @@ import Todo from './Todo'
 import InProgress from './InProgress'
 import Done from './Done'
 import { useTheme } from "./ThemeProvider";
+import DynamicTemplate from "./DynamicTemplate";
 
 function todoBody() {
 
@@ -19,6 +20,7 @@ function todoBody() {
     const [todoTasks, setTodoTasks] = useState([]);
     const [inProgressTasks, setInProgressTasks] = useState([]);
     const [doneTasks, setDoneTasks] = useState([]);
+    const [dynamicTemplates, setDynamicTemplates] = useState([]);
 
     //Fetch all tasks on component mount
     useEffect(() => {
@@ -100,6 +102,20 @@ function todoBody() {
         setActiveBox(null);
     };
 
+    const addTemplate = (templateName) => {
+        setDynamicTemplates(prevTemplates => [...prevTemplates, { name: templateName, tasks: [] }]);
+    }
+    
+    const updateDynamicTemplateTasks = (templateName, newTask) => {
+        setDynamicTemplates(prevTemplates =>
+            prevTemplates.map(template =>
+                template.name === templateName
+                    ? { ...template, tasks: [...template.tasks, newTask] }
+                    : template
+            )
+        );
+    }
+
   return (
     <div className={`${style['main-container']} ${theme === 'dark' ? style.darkTheme : ''}`}>
 
@@ -108,7 +124,7 @@ function todoBody() {
         </div>
 
         <div className={`${style.menu} ${theme === 'dark' ? style.darkMenu : ''}`}>
-            <Menu />
+            <Menu onAddTemplate={addTemplate}/>
         </div>
 
         {/* Div wraps all the three sections */}
@@ -146,8 +162,19 @@ function todoBody() {
                 onDrop={onDrop}
                 />
             </div>
+               {/* Render dynamic templates */}
+               {dynamicTemplates.map((template,index) => (
 
-        </div>
+                <div key={index} className={`${style['dynamic-template-div']} ${theme === 'dark' ? style['dynamic-template-div-dark'] : ''}`}
+                >
+                    <DynamicTemplate template={template}  
+                    updatetasks={updateDynamicTemplateTasks}
+                    />
+            
+                </div>
+
+               ))}
+          </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 //React and Components 
-import React from "react";
+import React,{useState} from "react";
 import { useTheme } from "./ThemeProvider";
+import AddTemplatePopup from './AddTemplatePopup';
 
 //style and Assets
 import style from "./Menu.module.css";
@@ -10,8 +11,24 @@ import AddIcon from "../assets/AddIcon.svg";
 import ThreeDotIcon from "../assets/threeDotIcon.svg";
 import Circle from "../assets/circle.svg";
 
-function Menu() {
+function Menu({onAddTemplate}) {
+  const [isPopupOpen,setIsPopupOpen] = useState(false);
   const { theme } = useTheme();
+
+  const addNewTemplate = () => {
+    setIsPopupOpen(true);
+  }
+  
+  const closePopup = () => {
+    setIsPopupOpen(false);
+  }
+
+  const handleSubmit = (templateName) => {
+    onAddTemplate(templateName);
+    // console.log(templateName);
+    setIsPopupOpen(false);
+  }
+
   return (
     <>
     <div className={`${style["menu-Div1"]} ${theme === 'dark' ? style['menu-div1-dark'] : ''}`}>
@@ -32,8 +49,16 @@ function Menu() {
           <Icon className={style.circle} src={Circle} />
           <Icon className={style.threeDotIcon} src={ThreeDotIcon} />
         </div>
-          <button className={style.content} >New template</button>
+
+          <button className={style.content} onClick={addNewTemplate} >New template</button>
+
       </div>
+      {isPopupOpen && (
+        <AddTemplatePopup 
+          onClose={closePopup}
+          onSubmit={handleSubmit}
+        />
+      )}
     </>
   );
 }

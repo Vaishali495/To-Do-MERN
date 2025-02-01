@@ -12,10 +12,15 @@ body {
 
 .main-content {
   /* background-color: #ff7c7c; */
+  /* background-color: #2A2B2F; */
   flex: 1;
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+/* .main-content-dark {
+  background-color: #2A2B2F;
+} */
 
 @media screen and (max-width: 600px) {
   .main-content {

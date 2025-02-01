@@ -27,7 +27,7 @@ function App() {
         <Route path='/' element={
             <div className="app-container">
             <Sidebar />
-            <div className="main-content">
+            <div className= "main-content">
               <TodoBody/>
             </div>
           </div>

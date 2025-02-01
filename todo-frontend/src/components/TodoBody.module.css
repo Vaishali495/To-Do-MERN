@@ -3,12 +3,14 @@
 }
 
 .darkTheme {
-  background-color: #373636;
+  /* background-color: #373636; */
+  background-color: #2A2B2F;
   color: white;
 }
 
 .darkHeader{
   border: none;
+  /* background-color: #2A2B2F; */
 }
 
 /* .lightHeader {
@@ -44,35 +46,48 @@
 }
 
 .darkMenu::after {
-  background-color: #707070;
+  background-color: #FFFFFF1A;
+  /* border: 2px solid #FFFFFF1A; */
 }
 
 .wrapper-div {
   /* background-color: #a79999; */
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   gap: 1rem;
-  overflow-y: hidden;
   margin: 1%;
   padding: 1.2rem;
   height: 76vh;
-  /* min-height: 100vh; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.wrapper-div::-webkit-scrollbar {
+  display: none;
 }
 
 .todo-div,
 .inProgress-div,
-.done-div {
+.done-div,
+.dynamic-template-div {
   /* background-color: #e07373; */
-  width: 29%;
-  height: 40rem;
   border-radius: 2.5%;
   border: 2px dashed #dbcece;
   padding: 1rem;
+  flex-grow: 1;
+  min-width: 350px;
+  max-width: 30%;
+  height: auto;
+  min-height: 40rem;
 }
 
-.todo-div-dark, .inProgress-div-dark, .done-div-dark {
-  background-color: #2d2e31;
+.todo-div-dark, .inProgress-div-dark, .done-div-dark, .dynamic-template-div-dark {
+  /* background-color: #2d2e31; */
+  background-color: #24262C;
   border: none;
+   /*border: 2px solid #ffffff1a;
+   Subtle border for dark theme --suggested */
 }
 
 @media screen and (max-width: 900px) {
@@ -114,6 +129,8 @@
 
   .wrapper-div {
     display: block;
+    /* display: flex;
+    flex-direction: column; */
     overflow-y: auto;
     height: 100vh;
     padding: 1rem;
@@ -125,6 +142,7 @@
   .inProgress-div,
   .done-div {
     width: 70vw;
+    /* width: 100%; full width fr small screens - suggested */
     height: auto;
     min-height: 20rem;
     margin: 0;
